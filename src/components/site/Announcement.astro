@@ -1,0 +1,55 @@
+---
+// AnnouncementTicker.astro
+const messages = [
+  'Call or Text For Appointments: 480-788-2403 📞',
+  "Send us a text 📲 and get a <span class='italic'>FREE</span> mattress protector with purchase",
+  '📚 Back to School sale 20% off all memory foam mattresses ',
+  "🚚 <span class='italic'>FREE</span>  Delivery",
+];
+
+const loopedMessages = [...messages, ...messages];
+---
+
+<div class='bg-custom-blue text-white w-full font-semibold overflow-hidden'>
+  <div class='ticker-wrap'>
+    <div class='ticker'>
+      {
+        loopedMessages.map((message) => (
+          <div class='ticker__item' set:html={message} />
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background-color: theme('colors.custom-blue');
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ticker {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: ticker 50s linear infinite;
+  }
+
+  .ticker:hover {
+    animation-play-state: paused;
+  }
+
+  .ticker__item {
+    flex: 0 0 auto;
+    padding: 0.5rem 2rem;
+  }
+</style>

@@ -1,51 +1,35 @@
 ---
+import TopBar from '../components/site/TopBar.astro';
+import Announcement from '../components/site/Announcement.astro';
+
 interface Props {
-	title: string;
+  title: string;
 }
 
-const { title } = Astro.props;
+import '@src/site.css';
+import BottomBar from '@components/site/BottomBar.astro';
+const { title = 'Bed Brokers' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content="Welcome to your top discount mattress store in Phoenix, where we offer premium mattresses at rock-bottom prices. With us at Bed Brokers, you don't need a fortune to invest in your sleep. Discover a wide range of discount mattresses that combine luxury and affordability. Shop with us to find the best deals on quality mattresses without breaking the bank."
+    />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/bed-brokers-logo.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class='mx-auto'>
+      <Announcement />
+      <TopBar />
+      <slot />
+      <BottomBar />
+    </div>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
