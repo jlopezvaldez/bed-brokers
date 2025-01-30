@@ -3,46 +3,72 @@ import Phone from './homepage/FeatureIcons/Phone.astro';
 ---
 
 <div class='max-w-7xl px-6 pb-8 mx-auto mt-20'>
-  <footer class='py-20 border-t flex flex-col sm:flex-row justify-between'>
-    <div class='mb-8 sm:mb-0'>
-      <a href='/' class='flex-initial'>
-        <div class='flex items-center'>
-          <img
-            src='/bed-brokers-logo.svg'
-            width='500'
-            height='500'
-            class='w-16 h-16 sm:w-24 sm:h-24'
-          />
-          <h2 class='ml-1 text-2xl sm:text-4xl font-bold'>
-            <span class='text-custom-blue'>Bed</span> Brokers
-          </h2>
-        </div>
-      </a>
-    </div>
-
-    <div class='mb-8 sm:mb-0'>
-      <p class='font-semibold'>Contact</p>
-      <div class='flex items-center space-x-2 mt-4'>
-        <a href='tel:14807882403' class='flex items-center'>
-          <Phone class='w-5 h-5 mr-2' />
-          480-788-2403
+  <footer class='py-20 border-t'>
+    <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
+      <!-- Logo Section -->
+      <div>
+        <a href='/' class='flex-initial'>
+          <div class='flex items-center'>
+            <img
+              src='/bed-brokers-logo.svg'
+              width='500'
+              height='500'
+              class='w-16 h-16 sm:w-24 sm:h-24'
+            />
+            <h2 class='ml-1 text-2xl sm:text-4xl font-bold'>
+              <span class='text-custom-blue'>Bed</span> Brokers
+            </h2>
+          </div>
         </a>
       </div>
-    </div>
 
-    <div>
-      <p class='font-semibold'>Social</p>
-      <a
-        href='https://www.instagram.com/phxbedbrokers/'
-        class='inline-block mt-4'
-      >
-        <img
-          src='/instagram.svg'
-          width='500'
-          height='500'
-          class='w-4 h-4 sm:w-6 sm:h-6'
-        />
-      </a>
+      <!-- Contact Section -->
+      <div>
+        <p class='font-semibold mb-4'>Contact</p>
+        <div class='flex items-center space-x-2'>
+          <a href='tel:14807882403' class='flex items-center'>
+            <Phone class='w-5 h-5 mr-2' />
+            480-788-2403
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Area Section -->
+      <div>
+        <p class='font-semibold mb-4'>Service Area</p>
+        <div class='grid grid-cols-2 gap-2 text-gray-600'>
+          <span>Phoenix</span>
+          <span>Scottsdale</span>
+          <span>Mesa</span>
+          <span>Chandler</span>
+          <span>Gilbert</span>
+          <span>Tempe</span>
+          <span>Glendale</span>
+          <span>Peoria</span>
+          <span>Surprise</span>
+          <span>Buckeye</span>
+          <span>Queen Creek</span>
+          <span>San Tan Valley</span>
+        </div>
+      </div>
+
+      <!-- Social Section -->
+      <div>
+        <p class='font-semibold mb-4'>Social</p>
+
+        <a
+          href='https://www.instagram.com/phxbedbrokers/'
+          class='inline-block'
+          aria-label='Follow us on Instagram'
+        >
+          <img
+            src='/instagram.svg'
+            width='500'
+            height='500'
+            class='w-4 h-4 sm:w-6 sm:h-6'
+          />
+        </a>
+      </div>
     </div>
   </footer>
 </div>
