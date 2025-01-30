@@ -1,82 +1,53 @@
 ---
 import Button from '@components/site/Button.astro';
-import CardWithPicture from '@components/site/CardWithPicture.astro';
-
-import AdjustableBase from '@src/images/adustable-base.png';
-import CopperLux from '@src/images/copper-lux-hybrid.png';
-import GelComfort from '@src/images/gel-comfort-mattress.png';
-import GelMax from '@src/images/gel-max-mattress.png';
-import HybridMattress from '@src/images/hybrid-mattress.png';
-import MattressProtector from '@src/images/quiet-comfort-mattress-protector.png';
-
-const items = [
-  {
-    title: 'Adjustable Bases for All Sizes',
-    image: AdjustableBase,
-    altText: 'Adjustable Bed Base',
-    link: '',
-  },
-  {
-    title: 'Copper Cooling Infused Memory Foam Hybrid Mattress',
-    image: CopperLux,
-    altText: 'Closeup of Copper Lux Hybrid Mattress',
-    link: '',
-  },
-  {
-    title: 'Cooling Memory Foam Mattresses with Open-Cell Foam',
-    image: GelComfort,
-    altText: 'Gel Comfort Memory Foam Mattress on a Bed Frame',
-    link: '',
-  },
-  {
-    title: 'Gel-Infused Ultra Comfort Memory Foam Mattress',
-    image: GelMax,
-    altText: 'Gel Max Memory Foam Mattress on a Bed Frame',
-    link: '',
-  },
-  {
-    title: '12" Hybrid Mattress With Pocket Coils and Memory Foam Layers',
-    image: HybridMattress,
-    altText: 'Hybrid Mattress on a Bed Frame',
-    link: '',
-  },
-  {
-    title: '100% Waterproof Mattress Protectors Availabe for All Sizes',
-    image: MattressProtector,
-    altText: 'Closeup of mattress protector',
-    link: '',
-  },
-];
 ---
 
-<div class='px-6 mx-auto mt-10 sm:mt-12 max-w-7xl lg:px-8'>
+<div class='px-6 mx-auto mt-10 sm:mt-12 max-w-7xl lg:px-8' id='features'>
   <div class='max-w-4xl mx-auto lg:text-center'>
-    <h2 class='text-xl font-semibold leading-7'>
-      We deliver all over the Valley: Phoenix, Buckeye, Mesa, Tempe, Gilbert,
+    <h2 class='text-xl font-semibold leading-7 text-custom-blue'>
+      We deliver all over the Valley: Phoenix, Goodyear, Buckeye, Mesa, Gilbert,
       Chandler, and More
     </h2>
     <h3 class='mt-2 text-3xl font-bold tracking-tight sm:text-5xl'>
       Never Pay Full Price For A Mattress Again
     </h3>
-    <Button
-      text='Invest in Your Next Best Rest 🚀'
-      link="sms:+14807882403?body=Hey! I'm ready for my best sleep 😴. What do you have in stock right now? 😁"
-    />
 
-    <p class='mt-6 text-lg leading-8'>See our current inventory below:</p>
-  </div>
-  <div class='max-w-4xl mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-5xl'>
-    <div class='grid grid-cols-1 sm:grid-cols-3 gap-8'>
-      {
-        items.map((item) => (
-          <CardWithPicture
-            title={item.title}
-            image={item.image}
-            altText={item.altText}
-            link={item.link}
-          />
-        ))
-      }
+    <!-- Benefits Section -->
+    <div class='grid grid-cols-1 gap-8 mt-10 sm:grid-cols-3'>
+      <div class='flex flex-col items-center p-6 bg-white rounded-lg shadow-sm'>
+        <span class='text-3xl mb-4'>⭐️</span>
+        <h4 class='text-xl font-semibold mb-2'>5 Star Service</h4>
+        <p class='text-gray-600 text-center'>
+          Experience exceptional customer care from start to finish. We're here
+          to ensure your complete satisfaction.
+        </p>
+      </div>
+
+      <div class='flex flex-col items-center p-6 bg-white rounded-lg shadow-sm'>
+        <span class='text-3xl mb-4'>⏰</span>
+        <h4 class='text-xl font-semibold mb-2'>Save Time</h4>
+        <p class='text-gray-600 text-center'>
+          Skip the showroom hassle. We bring the best mattress options directly
+          to you at unbeatable prices.
+        </p>
+      </div>
+
+      <div class='flex flex-col items-center p-6 bg-white rounded-lg shadow-sm'>
+        <span class='text-3xl mb-4'>📅</span>
+        <h4 class='text-xl font-semibold mb-2'>Easy Scheduling</h4>
+        <p class='text-gray-600 text-center'>
+          Book your appointment in minutes. Flexible times that work around your
+          schedule.
+        </p>
+      </div>
+    </div>
+
+    <div class='mt-10 flex justify-center'>
+      <Button
+        text='Invest in Your Next Best Rest 🚀'
+        subtext='Click to Call Johnny 📞'
+        link='tel:+14807882403'
+      />
     </div>
   </div>
 </div>

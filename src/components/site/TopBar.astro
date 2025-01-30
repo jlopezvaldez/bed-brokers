@@ -1,29 +1,25 @@
-<nav
-  class='flex justify-between text-md sm:text-lg font-semibold items-center px-4'
->
-  <a href='/' class='flex-1'>
-    <div class='flex items-center'>
-      <img
-        src='/bed-brokers-logo.svg'
-        alt='Logo'
-        class='w-20 h-20 sm:w-28 sm:h-28'
-      />
-      <h2 class='text-2xl sm:text-3xl font-bold tracking-tight items-center'>
-        <span class='text-custom-blue'>Bed</span> Brokers
-      </h2>
-    </div>
-  </a>
-
-  <div class='hidden sm:flex gap-x-12 items-center'>
-    <a href='tel:480-788-2403' '> 📞 480-788-2403</a>
-    <!-- <a href='/#gallery'>Gallery</a> -->
-    <!-- <a href='/#pricing'>Pricing</a> -->
-    <!-- <a href='#/blog'>Blog</a> -->
+<nav class='flex justify-between items-center px-4 py-2'>
+  <!-- Logo and Company Name -->
+  <div class='flex items-center'>
+    <img
+      src='/bed-brokers-logo.svg'
+      alt='Logo'
+      class='w-20 h-20 sm:w-28 sm:h-28'
+    />
+    <span class='text-2xl sm:text-3xl font-bold tracking-tight'>
+      <span class='text-custom-blue'>Bed</span> Brokers
+    </span>
   </div>
-  <div class='flex-1 items-center text-right'>
-    <a
-      href="sms:+14807882403?body=Hey! I'm ready for my best sleep 😴. What do you have in stock right now? 😁"
-      >Text Us &#128242;</a
-    ><br />
+
+  <!-- Navigation Links - Hidden on mobile -->
+  <div class='hidden lg:flex gap-x-10 items-center text-lg font-semibold'>
+    <a href='#products'>Products</a>
+    <a href='#features'>Features</a>
+    <a href='#faq'>FAQ</a>
+  </div>
+
+  <!-- Phone Number - Visible on all screens -->
+  <div class='text-right font-semibold'>
+    <a href='tel:480-788-2403' class='text-lg'>📞 480-788-2403</a>
   </div>
 </nav>

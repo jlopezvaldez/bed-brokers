@@ -1,0 +1,135 @@
+---
+// FAQ.astro
+---
+
+<div id='faq' class='max-w-4xl mx-auto px-4 py-16' x-data='{ active: null }'>
+  <h2 class='text-3xl sm:text-5xl font-bold text-center mb-12'>
+    Frequently Asked Questions
+  </h2>
+
+  <!-- FAQ Item 1 -->
+  <div class='mb-4'>
+    <button
+      class='flex justify-between w-full p-4 bg-white rounded-lg shadow-sm hover:bg-gray-50'
+      @click='active = active === 1 ? null : 1'
+      :class="{ 'mb-2': active === 1 }"
+    >
+      <span class='font-semibold'
+        >How does your mattress delivery process work?</span
+      >
+      <svg
+        class='w-5 h-5 transition-transform'
+        :class="{ 'rotate-180': active === 1 }"
+        fill='none'
+        stroke='currentColor'
+        viewBox='0 0 24 24'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M19 9l-7 7-7-7'></path>
+      </svg>
+    </button>
+    <div
+      x-show='active === 1'
+      x-collapse
+      x-cloak
+      class='px-4 py-3 bg-white rounded-lg shadow-sm'
+    >
+      <p class='text-gray-600'>
+        We offer convenient delivery throughout the Phoenix metro area. Once you
+        select your mattress, we'll schedule a delivery time that works for you.
+        Our team will bring the mattress directly to your home, set it up in
+        your desired room, and remove your old mattress if needed. We aim to
+        make the process as seamless as possible!
+      </p>
+    </div>
+  </div>
+
+  <!-- FAQ Item 2 -->
+  <div class='mb-4'>
+    <button
+      class='flex justify-between w-full p-4 bg-white rounded-lg shadow-sm hover:bg-gray-50'
+      @click='active = active === 2 ? null : 2'
+      :class="{ 'mb-2': active === 2 }"
+    >
+      <span class='font-semibold'
+        >What makes your prices better than retail stores?</span
+      >
+      <svg
+        class='w-5 h-5 transition-transform'
+        :class="{ 'rotate-180': active === 2 }"
+        fill='none'
+        stroke='currentColor'
+        viewBox='0 0 24 24'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M19 9l-7 7-7-7'></path>
+      </svg>
+    </button>
+    <div
+      x-show='active === 2'
+      x-collapse
+      x-cloak
+      class='px-4 py-3 bg-white rounded-lg shadow-sm'
+    >
+      <p class='text-gray-600'>
+        We operate with lower overhead costs than traditional retail stores by
+        not maintaining expensive showrooms. We work directly with manufacturers
+        and have established strong relationships that allow us to get wholesale
+        pricing. These savings are passed directly to you, often resulting in
+        40-60% off retail prices for the same high-quality mattresses.
+      </p>
+    </div>
+  </div>
+
+  <!-- FAQ Item 3 -->
+  <div class='mb-4'>
+    <button
+      class='flex justify-between w-full p-4 bg-white rounded-lg shadow-sm hover:bg-gray-50'
+      @click='active = active === 3 ? null : 3'
+      :class="{ 'mb-2': active === 3 }"
+    >
+      <span class='font-semibold'
+        >Do you offer warranties on your mattresses?</span
+      >
+      <svg
+        class='w-5 h-5 transition-transform'
+        :class="{ 'rotate-180': active === 3 }"
+        fill='none'
+        stroke='currentColor'
+        viewBox='0 0 24 24'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M19 9l-7 7-7-7'></path>
+      </svg>
+    </button>
+    <div
+      x-show='active === 3'
+      x-collapse
+      x-cloak
+      class='px-4 py-3 bg-white rounded-lg shadow-sm'
+    >
+      <p class='text-gray-600'>
+        Yes! All our mattresses come with full manufacturer warranties,
+        typically ranging from 10-20 years depending on the brand and model.
+        These warranties cover any manufacturing defects or unusual wear. We'll
+        provide you with all warranty documentation upon delivery and are happy
+        to assist with any warranty claims if needed.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+</style>

@@ -8,7 +8,8 @@ interface Props {
 
 import '@src/site.css';
 import BottomBar from '@components/site/BottomBar.astro';
-const { title = 'Bed Brokers' } = Astro.props;
+const { title = 'Phoenix Discount Mattress Store | AZ Bed Brokers' } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -17,7 +18,7 @@ const { title = 'Bed Brokers' } = Astro.props;
     <meta charset='UTF-8' />
     <meta
       name='description'
-      content='Welcome to Bed Brokers! Shop with us to find the best deals on premium mattresses without breaking the bank. Same day delivery and pickup.'
+      content='Welcome to Bed Brokers! Shop with us to find the best deals on premium mattresses without breaking the bank. Call or text us for appointments!'
     />
     <meta property='og:image' content='https://azbedbrokers.com/banner.png' />
     <meta name='viewport' content='width=device-width' />
@@ -30,6 +31,10 @@ const { title = 'Bed Brokers' } = Astro.props;
     <meta name='theme-color' content='#ffffff' />
     <meta name='generator' content={Astro.generator} />
     <link rel='canonical' href={Astro.url} />
+    <script
+      defer
+      src='https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js'
+    ></script>
 
     <title>{title}</title>
   </head>

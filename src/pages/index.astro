@@ -3,6 +3,9 @@ import Banner from '@components/site/homepage/Banner.astro';
 import Layout from '@layouts/Layout.astro';
 import Hero from '@components/site/Hero.astro';
 import CurrentInventory from '@components/site/homepage/CurrentInventory.astro';
+import AppointmentForm from '@components/site/AppointmentForm.astro';
+import BrandsAndProducts from '@components/site/BrandsAndProducts.astro';
+import FAQ from '@components/site/FAQ.astro';
 
 export const prerender = true;
 ---
@@ -10,5 +13,7 @@ export const prerender = true;
 <Layout title=`Discount Mattress Store in Phoenix | Bed Brokers`>
   <Hero />
   <Banner />
+  <BrandsAndProducts />
   <CurrentInventory />
+  <FAQ />
 </Layout>
